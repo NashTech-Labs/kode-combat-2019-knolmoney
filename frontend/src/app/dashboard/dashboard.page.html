@@ -1,0 +1,54 @@
+<ion-content>
+    <ion-grid>
+        <div class="logo-area">
+            <ion-row class="knoldus-logo">
+                <ion-col size-sm>
+                    <ion-img style="width: 50%%;" alt="Knoldus Logo" src="./assets/logo.png"></ion-img>
+                </ion-col>
+            </ion-row>
+        </div>
+        <div class="login-text-area">
+            <ion-row class="login-text-row">
+                <ion-col size="12" size-sm>
+                    <ion-text>Dashboard</ion-text>
+                </ion-col>
+            </ion-row>
+        </div>
+        <div class="dashboard-area">
+            <ion-card style="width: 100%; margin-left: 0; height: 100px;">
+                <ion-row style="margin-top: 30px; font-size: 22px;">
+                    <div style="width: 10%;" class="ion-text-center">
+                        <ion-icon name="pin"></ion-icon>
+                    </div>
+                    <div style="width: 80%;" class="ion-text-center">
+                        <ion-label>Current Month Spent</ion-label>
+                    </div>
+                    <div style="width: 10%;" class="ion-text-center">
+                        <ion-icon name="arrow-forward"></ion-icon>
+                    </div>
+                </ion-row>
+            </ion-card>
+            <ion-card style="width: 100%; margin-left: 0; height: 100px;">
+                <ion-row style="margin-top: 30px; font-size: 22px;">
+                    <div style="width: 10%;" class="ion-text-center">
+                        <ion-icon name="pin"></ion-icon>
+                    </div>
+                    <div style="width: 80%;" class="ion-text-center">
+                        <ion-label>Last Month Spent</ion-label>
+                    </div>
+                    <div style="width: 10%;" class="ion-text-center">
+                        <ion-icon name="arrow-forward"></ion-icon>
+                    </div>
+                </ion-row>
+            </ion-card>
+            <ion-row class="login-button-row">
+                <ion-col style="width: 49%; margin-right: 2%; background: #0096FA; overflow: hidden; border-radius: 20px; padding: 0; font-size: 14px;">
+                    <ion-button color="blue" expand="block" shape="round" (click)="addMoney()">Add Money</ion-button>
+                </ion-col>
+                <ion-col style="width: 49%; background: #0096FA; overflow: hidden; border-radius: 20px; padding: 0; font-size: 14px;">
+                    <ion-button color="blue" expand="block" shape="round" (click)="placeOrder()">Place Order</ion-button>
+                </ion-col>
+            </ion-row>
+        </div>
+    </ion-grid>
+</ion-content>

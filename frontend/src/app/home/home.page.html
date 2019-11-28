@@ -1,0 +1,40 @@
+<ion-content>
+    <ion-grid>
+        <div class="logo-area">
+            <ion-row class="knoldus-logo">
+                <ion-col size="12" size-sm>
+                    <ion-img src="./assets/logo.png" alt="Knoldus Logo"></ion-img>
+                </ion-col>
+            </ion-row>
+        </div>
+
+        <div class="form-area">
+            <ion-row>
+                <ion-col size="12" size-sm>
+                    <ion-input placeholder="Email" name="email" [(ngModel)]="email" ngDefaultControl required="true" type="email">
+                        <ion-icon name="mail"></ion-icon>
+                    </ion-input>
+                    <div *ngIf="emailErrors"> {{ emailErrors }} </div>
+                </ion-col>
+                <ion-col size="12" size-sm>
+                    <ion-input placeholder="Password" name="password" [(ngModel)]="password" ngDefaultControl required="true" type="password">
+                        <ion-icon name="lock"></ion-icon>
+                    </ion-input>
+                    <div *ngIf="passwordErrors"> {{ passwordErrors }} </div>
+                </ion-col>
+            </ion-row>
+            <ion-row class="forgot-password-row">
+                <ion-col size="12" size-sm>
+                    <ion-text><a routerLink="/forgot-password">Forgot Password ?</a></ion-text>
+                </ion-col>
+            </ion-row>
+            <ion-row class="login-button-row">
+                <ion-col class="ion-padding-vertical" size="12" size-sm
+                         style="background: #0096FA; overflow: hidden; border-radius: 20px; padding: 0; font-size: 14px;">
+                    <ion-button color="blue" expand="block" shape="round" (click)="validateForm()">Log in</ion-button>
+                </ion-col>
+            </ion-row>
+        </div>
+
+    </ion-grid>
+</ion-content>

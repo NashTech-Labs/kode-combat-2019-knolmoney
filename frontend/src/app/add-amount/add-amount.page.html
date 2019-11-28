@@ -1,0 +1,33 @@
+<ion-content>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/dashboard"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+    <ion-grid>
+        <div class="logo-area">
+            <ion-row class="knoldus-logo">
+                <ion-col size-sm>
+                    <ion-img style="width: 50%;" alt="Knoldus Logo" src="./assets/logo.png"></ion-img>
+                </ion-col>
+            </ion-row>
+        </div>
+        <div class="form-area">
+            <ion-row>
+                <ion-col size="12" size-sm>
+                    <ion-input placeholder="Amount" name="amount" [(ngModel)]="amount" ngDefaultControl required="true"
+                               type="number">
+                        <ion-icon name="dollar"></ion-icon>
+                    </ion-input>
+                    <div *ngIf="amountErrors"> {{ amountErrors }} </div>
+                </ion-col>
+            </ion-row>
+            <ion-row class="login-button-row">
+                <ion-col class="ion-padding-vertical" size="12" size-sm
+                         style="background: #0096FA; overflow: hidden; border-radius: 20px; padding: 0; font-size: 14px;">
+                    <ion-button color="blue" expand="block" shape="round" (click)="addMoney()">Add Money</ion-button>
+                </ion-col>
+            </ion-row>
+        </div>
+    </ion-grid>
+</ion-content>
